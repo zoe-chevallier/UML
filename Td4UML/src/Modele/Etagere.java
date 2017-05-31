@@ -2,7 +2,7 @@ package Modele;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Etagere {
+public class Etagere implements Imprimable{
 	private ArrayList<Document> listeDocuments;
 	private int nbDocMax;
 	
@@ -96,6 +96,14 @@ public class Etagere {
 	 */
 	public void trieEtagere(){
 		Collections.sort(listeDocuments, new ComparateurDoc());
+	}
+	@Override
+	public void imprimer() {
+		for (Document doc : listeDocuments){
+			if (doc instanceof Livre)
+				System.out.println("Imprime " + doc.toString());
+		}
+		
 	}
 	
 }

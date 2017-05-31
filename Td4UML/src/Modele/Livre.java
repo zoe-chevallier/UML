@@ -1,6 +1,6 @@
 package Modele;
 
-public abstract class Livre extends Document implements Imprimable{
+public abstract class Livre extends Document /*implements Imprimable*/{
 	@Override
 	public String toString() {
 		return "Livre [titre=" + titre + ", auteur=" + auteur + "]";
